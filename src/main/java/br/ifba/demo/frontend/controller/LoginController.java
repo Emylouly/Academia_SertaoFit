@@ -74,11 +74,7 @@ public class LoginController {
         // Validação simples das credenciais
         if ("josegomes@gmail.com".equals(usuario) && "123".equals(senha)) {
             mav.setViewName("perfil");  // Se as credenciais estão corretas, redireciona para o perfil
-        } 
-        
-        else if("emily@gmail.com".equals(usuario) && "123".equals(senha)) {
-            mav.setViewName("perfil2");  // Se as credenciais estão corretas, redireciona para o perfil2
-        } 
+        }
 
         else {
             mav.setViewName("login");  // Se as credenciais estão incorretas, retorna à página de login
