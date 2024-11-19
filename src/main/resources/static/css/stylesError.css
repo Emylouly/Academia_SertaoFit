@@ -7,15 +7,6 @@ body {
     background-color: #f8f8f8;
 }
 
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #8B4513;
-    padding: 10px 20px;
-    color: white;
-}
-
 .logo {
     display: flex;
     align-items: center;
@@ -26,16 +17,6 @@ header {
     margin-right: 10px;
 }
 
-.nav-links a {
-    color: white;
-    text-decoration: none;
-    margin: 0 10px;
-    font-weight: bold;
-}
-
-.nav-links a:hover {
-    text-decoration: underline;
-}
 
 /* Container da mensagem de erro */
 .error-container {
@@ -55,7 +36,7 @@ header {
 }
 
 .error-container img {
-    width: 200px;
+    width: 500px;
     margin: 20px 0;
     animation: float 2s infinite;
 }
@@ -69,24 +50,3 @@ header {
     }
 }
 
-.error-container a {
-    text-decoration: none;
-    color: white;
-    background-color: #8B4513;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-weight: bold;
-}
-
-.error-container a:hover {
-    background-color: #6B3A0D;
-}
-
-/* Rodapé */
-footer {
-    text-align: center;
-    padding: 10px;
-    background-color: #8B4513;
-    color: white;
-    margin-top: 50px;
-}
