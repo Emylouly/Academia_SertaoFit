@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/stylescadastro.css">
+    <title>Cadastro</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="../icons/flavicon.png">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="../icons/cactus.png" alt="SertãoFit Logo">
+            <h1>SertãoFit</h1>
+        </div>
+        <div class="nav-links">
+            <a href="/index">Home</a>
+            <a href="/planos">Planos</a>
+            <a href="/quemSomos">Quem Somos</a>
+            <a href="/login">Entrar</a>
+        </div>
+    </header>
+
+    <div class="container">
+
+        <form id="cadastroForm">
+            <h1>Cadastre-se</h1>
+            
+            <div class="input-container">
+                <input type="text" id="nome" placeholder="Nome Completo" required>
+                <img width="20" height="20" src="https://img.icons8.com/fluency-systems-filled/48/000000/user.png" alt="user"/>
+            </div>
+
+            <div class="input-container">
+                <input type="email" id="email" placeholder="Email" required>
+                <img width="20" height="20" src="https://img.icons8.com/fluency-systems-filled/48/000000/email.png" alt="email"/>
+            </div>
+
+            <div class="input-container">
+                <input type="password" id="password" placeholder="Senha" required>
+                <img width="20" height="20" src="https://img.icons8.com/ios-glyphs/30/000000/lock-2.png" alt="lock"/>
+            </div>
+
+            <div class="input-container">
+                <input type="password" id="confirmPassword" placeholder="Confirmar Senha" required>
+                <img width="20" height="20" src="https://img.icons8.com/ios-glyphs/30/000000/lock-2.png" alt="lock"/>
+            </div>
+
+            <button type="submit" class="submit-button">Cadastrar</button>
+        </form>
+
+        <div class="login-link">
+            <p>Já tem uma conta? <a href="/login">Entre aqui</a></p>
+        </div>
+
+    </div>
+</body>
+
+</html>
