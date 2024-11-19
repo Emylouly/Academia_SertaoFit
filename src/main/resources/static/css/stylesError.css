@@ -1,0 +1,92 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f8f8f8;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #8B4513;
+    padding: 10px 20px;
+    color: white;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+/* Container da mensagem de erro */
+.error-container {
+    text-align: center;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+.error-container h1 {
+    font-size: 4rem;
+    color: #8B4513;
+}
+
+.error-container p {
+    font-size: 1.2rem;
+    margin: 20px 0;
+}
+
+.error-container img {
+    width: 200px;
+    margin: 20px 0;
+    animation: float 2s infinite;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.error-container a {
+    text-decoration: none;
+    color: white;
+    background-color: #8B4513;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.error-container a:hover {
+    background-color: #6B3A0D;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #8B4513;
+    color: white;
+    margin-top: 50px;
+}
