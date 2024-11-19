@@ -1,0 +1,196 @@
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header {
+            background-color: #8e582c;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            color: white;
+        }
+        header .logo {
+            display: flex;
+            align-items: center;
+        }
+        header .logo img {
+            height: 60px;
+            margin-right: 10px;
+        }
+        .nav-links {
+            margin-left: auto; /* Alinha os links à direita */
+            display: flex;
+            gap: 100px;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: white; /* Ajuste a cor conforme necessário */
+            font-weight: bold;
+        }
+        .navbar {
+            background-color: #8B4513; /* Cor marrom */
+            color: white;
+            text-align: center;
+            width: 100%;
+            height: 20.33vh; /* 2/6 da altura da tela kkkkkk */
+            position: relative;
+        }
+        .navbar h1 {
+            font-size: 2em; /* Tamanho da fonte do título */
+            font-family: 'Roboto', sans-serif; /* Definindo a fonte */
+            margin: 0;
+            position: absolute;
+            top: 30%; /* 30% abaixo da parte superior da barra */
+            left: 50%;
+            transform: translate(-50%, -30%);
+        }
+        
+        .navbar img {
+            height: 60px
+            
+        }
+        .back-button {
+            position: absolute;
+            top: 10px; /* Ajuste para posicionar o botão dentro da barra marrom */
+            left: 10px; /* Alinhado à esquerda */
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            background-color: #8B4513; /* Marrom */
+            padding: 8px 12px;
+            cursor: pointer; /* Efeito de clique como se fosse botão */
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .back-button::before {
+            /*content: '←'; /* Seta para a esquerda */
+            font-size: 20px;
+            margin-right: 8px;
+        }
+        .back-button:hover {
+            background-color: #7a3819; /* Tom mais escuro de marrom ao passar o mouse pra dar efeito de botão*/
+            color: yellow;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 60px;
+            position: relative;
+            margin-top: 0vh; /* Ajuste para que o quadrado branco esteja sobre a barra marrom */
+            z-index: 1;
+            flex: 1; /* Faz com que o container expanda para preencher o espaço restante */
+        }
+        .box {
+            background-color: white;
+            border: 2px solid black; /* Borda preta pra destacar */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 85%; /* Largura do quadro branco */
+            max-width: 600px;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .header h2 {
+            margin: 0;
+        }
+        .header .dropdown {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+            margin-left: 10px;
+            border: 2px solid yellow; /* Bordas amarelas */
+            border-radius: 5px; /* Bordas arredondadas */
+            padding: 5px 10px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+        }
+        .header .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            border: 1px solid black;
+            z-index: 1;
+            top: 100%;
+            left: 0;
+            min-width: 160px;
+        }
+        .header .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .header .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+        .header .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .info-section {
+            margin-bottom: 20px;
+        }
+        .info-section .info {
+            font-size: 0.9em;
+            margin: 5px 0;
+        }
+        .info-section .line {
+            border-bottom: 2px solid yellow; /* Linha amarela pra separar cada bloquinho*/
+            margin: 10px 0;
+        }
+        .daily-sections {
+            padding-top: 10px;
+        }
+        .daily-section {
+            margin-bottom: 20px;
+            border-bottom: 2px solid yellow; /* Linha amarela entre as linhas da semana */
+            padding-bottom: 10px;
+        }
+        .daily-section h3 {
+            margin: 0;
+            font-size: 1.2em; /* Tamanho do título do dia da semana */
+            color: black;
+            padding-bottom: 5px; /* Espaçamento reduzido entre o título e a linha amarela */
+        }
+        .daily-section .activities {
+            font-size: 0.9em; /* Tamanho da fonte das atividades */
+            margin-bottom: 10px;
+        }
+        .buttons {
+            display: flex;
+            gap: 10px; /* Espaçamento entre os botões */
+        }
+        .button {
+            background-color: #8B4513; /* Marrom */
+            color: white;
+            border: 2px solid black; /* Borda preta */
+            border-radius: 5px; /* Bordas arredondadas */
+            padding: 10px 20px;
+            text-align: center;
+            flex: 1; /* Ocupa espaço disponível */
+            cursor: pointer; /* Efeito de clique */
+        }
+        .button:first-of-type {
+            margin-right: 10px; /* Espaçamento entre os botões */
+        }
+        footer {
+            background-color: #8B4513; /* Cor marrom */
+            color: white;
+            text-align: center;
+            padding: 10px;
+            width: 100%;
+            position: relative;
+        }
+  
+    

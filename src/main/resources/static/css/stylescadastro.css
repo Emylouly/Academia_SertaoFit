@@ -1,0 +1,167 @@
+* {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+        background: url("../imagens/sertaofit.png");
+        background-size: cover; 
+        background-repeat: no-repeat; 
+        background-position: center center;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+}
+
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #8e582c;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    color: white;
+    z-index: 1000;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+}
+
+header .logo img {
+    height: 60px;
+    margin-right: 10px;
+}
+
+header .menu img {
+    height: 30px;
+}
+
+.nav-links {
+    margin-left: auto; /* Alinha os links à direita */
+    display: flex;
+    gap: 100px;
+}
+
+
+.nav-links a {
+    text-decoration: none;
+    color: white; /* Ajuste a cor conforme necessário */
+    font-weight: bold;
+}
+
+.container {
+
+    width: 420px;
+    background: transparent;
+    border: 2px solid rgb(110, 110, 110);
+    backdrop-filter: blur(20px);
+    border-radius: 10px;
+    padding: 30px 40px;
+    margin: 100px auto 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+h1 {
+    text-align: center;
+    font-size: 36px;
+    color: beige;
+}
+
+.input-container{
+    position: relative;
+    width: 300px;
+    height: 30px;
+    margin: 50px;
+}
+
+.input-container input{
+
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid whitesmoke;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    color: antiquewhite;
+    padding: 20px 45px 20px 20px ;
+}
+
+.input-container input::placeholder{
+    color: antiquewhite;
+}
+
+.input-container img {
+    position: absolute;
+    right: 24px;
+    margin-top: 5px;
+    top: 20%;
+}
+
+.input-container a{
+    color: aliceblue;
+    margin-top: 2px;
+    font-size: 16px;
+    text-align: center;
+    padding: 0 0 0 20px;
+}
+
+.input-container a:hover{
+    text-decoration: underline;
+}
+
+.submit-button{
+    width: 100%;
+    height: 50px;
+    background-color: rgb(105, 167, 26);
+    border: none;
+    border-radius: 10px;
+    font-weight: 700;
+    color: aliceblue;
+    cursor: pointer;
+    outline: none;
+    font-size: 16px;
+
+}
+
+.submit-button:hover{
+    background-color: rgba(145, 248, 48, 0.705);
+}
+
+.cadastro {
+    text-align: center;
+    margin:20px 0 ;
+}
+
+.cadastro p{
+    font-size: 16px;
+    color: aliceblue;
+    font-weight: 300;
+}
+
+.cadastro a{
+    font-size: 16px;
+    color: aliceblue;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.cadastro a:hover{
+    color: yellowgreen;
+    text-decoration: underline;
+}
