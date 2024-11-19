@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SertãoFit</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="../icons/flavicon.png">
+    <link rel="stylesheet" href="/css/styleEditarTreinos.css">   
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="../icons\cactus.png" alt="SertãoFit Logo">
+            <h1>SertãoFit</h1>
+        </div>
+
+        <div class="nav-links">
+            <a href="/index">Home</a>
+            <a href="/planos">Planos</a>
+            <a href="/quemSomos">Quem Somos</a>
+            <a href="/perfil">Perfil</a>
+        </div>
+    </header>
+    
+    <div class="treino-info">
+        <h3>Treino Atual</h3>
+        <div class="treino">
+            <label for="treino-dia">Dia da Semana:</label>
+            <!-- Caixa de seleção para os dias da semana -->
+            <select id="treino-dia">
+                <option value="Segunda-feira">Segunda-feira</option>
+                <option value="Terça-feira">Terça-feira</option>
+                <option value="Quarta-feira">Quarta-feira</option>
+                <option value="Quinta-feira">Quinta-feira</option>
+                <option value="Sexta-feira">Sexta-feira</option>
+                <option value="Sábado">Sábado</option>
+                <option value="Domingo">Domingo</option>
+            </select>
+
+            <label for="exercicio">Exercício:</label>
+            <textarea id="exercicio" rows="4">Agachamento, Flexão, Abdominal</textarea>
+
+            <label for="peso">Peso (kg):</label>
+            <input type="number" id="peso" value="20">
+
+            <label for="repeticoes">Repetições:</label>
+            <input type="number" id="repeticoes" value="12">
+        </div>
+    </div>
+
+    <div class="actions">
+        <button onclick="salvarTreino()">Salvar Alterações</button>
+        <button onclick="cancelarAlteracoes()">Cancelar</button>
+    </div>
+</body>
+</html>

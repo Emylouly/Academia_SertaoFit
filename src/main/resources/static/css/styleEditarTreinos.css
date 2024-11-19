@@ -1,0 +1,152 @@
+/* Geral */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f4f4f4; /* Cor de fundo clara */
+    color: #333; /* Cor padrão do texto */
+    font-size: 16px; /* Tamanho de fonte padrão */
+    line-height: 1.6; /* Espaçamento entre linhas */
+}
+
+h1, h3 {
+    color: #C06C2C; /* Cor terrosa (remete ao sertão) */
+}
+
+h1 {
+    font-size: 2.8rem; /* Tamanho maior do título */
+    margin-top: 20px;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #D67E36; /* Cor quente, lembra o sertão */
+    color: #fff; /* Cor do texto no cabeçalho */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px; /* Mais espaçamento */
+}
+
+.logo img {
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 20px; /* Maior distância entre links */
+    font-size: 1.2rem; /* Um pouco maior que antes */
+    text-transform: uppercase;
+}
+
+.nav-links a:hover {
+    color: #F2A64D; /* Cor mais clara para o hover */
+}
+
+/* Informações do treino */
+.treino-info {
+    background-color: #fff; /* Fundo branco */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra mais suave */
+    margin: 40px auto; /* Maior espaçamento em volta */
+    width: 80%;
+    padding: 30px; /* Mais espaçamento interno */
+}
+
+.treino-info h3 {
+    text-align: center;
+    font-size: 2.2rem; /* Tamanho maior do subtítulo */
+    margin-bottom: 30px; /* Mais espaçamento abaixo do título */
+}
+
+.treino label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px; /* Mais distância entre o label e o campo */
+    margin-top: 20px; /* Distância entre o label e o campo anterior */
+    font-size: 1.1rem; /* Tamanho maior dos rótulos */
+    color: #444;
+}
+
+input[type="text"], input[type="number"], textarea, select {
+    width: 100%;
+    padding: 12px; /* Mais padding para maior conforto */
+    margin-top: 5px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: #fff; /* Cor de fundo do campo */
+    color: #333;
+}
+
+textarea {
+    resize: none;
+}
+
+input[type="text"]:disabled, input[type="number"]:disabled {
+    background-color: #f9f9f9;
+    cursor: not-allowed;
+}
+
+input[type="number"] {
+    max-width: 120px; /* Maior largura para o campo de número */
+}
+
+textarea {
+    height: 120px; /* Tamanho maior da área de texto */
+}
+
+/* Botões */
+.actions {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px; /* Maior espaçamento acima dos botões */
+}
+
+button {
+    background-color: #D67E36; /* Cor quente (combina com o tema sertão) */
+    color: white;
+    border: none;
+    padding: 12px 25px; /* Mais padding nos botões */
+    font-size: 1.1rem; /* Tamanho de fonte maior nos botões */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 0 15px; /* Maior espaço entre os botões */
+}
+
+button:hover {
+    background-color: #F2A64D; /* Cor mais clara para o hover */
+}
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-links a {
+        margin: 15px 0;
+        font-size: 1rem;
+    }
+
+    .treino-info {
+        width: 90%;
+    }
+
+    .actions {
+        flex-direction: column;
+    }
+
+    button {
+        margin: 15px 0;
+    }
+}
