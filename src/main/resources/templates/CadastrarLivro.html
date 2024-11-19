@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+
+<!-- Mirrored from themepixels.com/demo/webpage/chain/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 Aug 2014 12:18:34 GMT -->
+<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>Chain Responsive Bootstrap3 Admin</title>
+
+        <link href="css/style.default.css" rel="stylesheet">
+        <link href="css/morris.css" rel="stylesheet">
+        <link href="css/select2.css" rel="stylesheet" />
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+        <script src="js/html5shiv.min.js"></script>
+        <script src="js/respond.min.js"></script>
+        <![endif]-->
+
+    </head>
+
+    <body>
+		
+		<div th:replace="/comum/header"></div>
+        
+        <section>
+            <div class="mainwrapper">
+            	
+            	<div th:replace="/comum/leftpanel"></div>
+            	
+                <div class="mainpanel">
+                    <div class="pageheader">
+                        <div class="media">
+                            <div class="pageicon pull-left">
+                                <i class="fa fa-home"></i>
+                            </div>
+                            <div class="media-body">
+                                <ul class="breadcrumb">
+                                    <li><a href="#"><i class="glyphicon glyphicon-home"></i></a></li>
+                                    <li>Cadastro de Livro</li>
+                                </ul>
+                                <h4>Cadastro de Livro</h4>
+                            </div>
+                        </div><!-- media -->
+                    </div><!-- pageheader -->
+                    
+                    <div class="contentpanel">
+                        <form action="">
+                            <label for="titulo">Titulo:</label><br>
+                            <input type="text" id="titulo" name="titulo" placeholder="titulo"><br>
+                            <label for="SubTitulo">SubTitulo:</label><br>
+                            <input type="text" id="SubTitulo" name="SubTitulo" placeholder="SubTitulo"><br>
+                            <label for="Autor">Autor:</label><br>
+                            <input type="text" id="Autor" name="Autor" placeholder="Autor"><br>
+                            <label for="Editora">Editora:</label><br>
+                            <input type="text" id="Editora" name="Editora" placeholder="Editora"><br>
+                            <label for="Ano">Ano:</label><br>
+                            <input type="date" id="Ano" name="Ano" placeholder="Ano"><br>
+                            <label for="ISBN">ISBN:</label><br>
+                            <input type="text" id="ISBN" name="ISBN" placeholder="ISBN"><br>                            
+                            <label for="nr_pagina">Numero de paginas:</label><br>
+                            <input type="number" id="nr_pagina" name="nr_pagina" placeholder="Numero de paginas"><br>
+                            
+                            <label for="is_serie">Pertence a uma serie?</label>
+                            <input type="checkbox" id="is_serie" name="is_serie" value="false"> <br>
+
+                            <label for="Sinopse">Sinopse:</label><br>
+                            <input type="text" id="Sinopse" name="Sinopse" placeholder="Sinopse"><br>
+                            <label for="edicao">edicao:</label><br>
+                            <input th:value="${edicao}" type="text" id="edicao" name="edicao" placeholder="edicao"><br>
+                            <label for="status">Situação:</label><br>
+                            
+                            <select th:field="${lista}">
+                                <option th:each="obj : ${lista}" 
+                                    th:value="${obj.codigo}" 
+                                    th:text="${obj.nome}">Wireframe</option>
+                            </select>
+
+                            <br>
+                            <input type="submit" value="Submit">
+                          </form> 
+                        
+                    </div><!-- contentpanel -->
+                    
+                </div><!-- mainpanel -->
+            </div><!-- mainwrapper -->
+        </section>
+
+
+        <script src="js/jquery-1.11.1.min.js"></script>
+        <script src="js/jquery-migrate-1.2.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/modernizr.min.js"></script>
+        <script src="js/pace.min.js"></script>
+        <script src="js/retina.min.js"></script>
+        <script src="js/jquery.cookies.js"></script>
+        
+
+        <script src="js/flot/jquery.flot.min.js"></script>
+        <script src="js/flot/jquery.flot.resize.min.js"></script>
+        <script src="js/flot/jquery.flot.spline.min.js"></script>
+        <script src="js/jquery.sparkline.min.js"></script>
+        <script src="js/morris.min.js"></script>
+        <script src="js/raphael-2.1.0.min.js"></script>
+        <script src="js/bootstrap-wizard.min.js"></script>
+        <script src="js/select2.min.js"></script>
+
+  <!--[if lt IE 8]>
+  <script src="js/flot/excanvas.min.js"></script>
+    <![endif]-->
+
+
+        <script src="js/custom.js"></script>
+        <script src="js/dashboard.js"></script>
+
+
+
+    </body>
+
+<!-- Mirrored from themepixels.com/demo/webpage/chain/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 19 Aug 2014 12:19:13 GMT -->
+</html>
