@@ -6,7 +6,7 @@
 }
 
 body {
-        background: url(sertaofit.webp);
+        background: url("../imagens/sertaofit.webp");
         background-size: cover; 
         background-repeat: no-repeat; 
         background-position: center center;
