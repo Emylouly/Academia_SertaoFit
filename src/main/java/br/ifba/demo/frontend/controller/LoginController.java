@@ -60,6 +60,11 @@ public class LoginController {
 		return "perfil2";
 	}
 
+	@GetMapping("/faturas")
+	public String faturas(){
+		return "faturas";
+	}
+
 	@PostMapping("/process_login")
     public ModelAndView processLogin(HttpServletRequest request) {
         // Pega os valores dos campos de email e senha do formulário
