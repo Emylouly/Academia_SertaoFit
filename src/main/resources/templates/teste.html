@@ -1,0 +1,29 @@
+<div class="container">
+    <form action="/process_login" method="post">
+        <h1>Entrar na Plataforma</h1>
+        <div class="input-container">
+            <input placeholder="Email" type="email" name="usuario" required>
+            <img width="20" height="20" 
+            src="https://img.icons8.com/fluency-systems-filled/48/000000/user.png" 
+            alt="user" />
+        </div>
+
+        <div class="input-container">
+            <input placeholder="Senha" type="password" name="senha" required>
+            <img width="20" height="20" 
+            src="https://img.icons8.com/ios-glyphs/30/000000/lock-2.png" alt="lock-2" />
+            <a href="#">Esqueci minha senha</a>
+        </div>
+
+        <div class="error-message">
+            <p th:text="${errorMessage}" style="color:red;"></p>
+        </div>
+
+        <button type="submit" class="submit-button">Entrar</button>
+    </form>
+
+    <div class="cadastro">
+        <p>Não tem um cadastro? </p>
+        <a href="/cadastro"> Realize agora! </a>
+    </div>
+</div>

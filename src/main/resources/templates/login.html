@@ -14,12 +14,12 @@
 <body>
     <div class="container">
 
-        <form>
+        <form action="/process_login" method="post">
 
             <h1>Entrar na Plataforma</h1>
             <div class="input-container">
 
-                <input placeholder="Email" type="email" required>
+                <input placeholder="Email" type="email" name = "usuario" required>
                 <img width="20" height="20" src="../icons/usuarioLogin.png"
                     alt="user" />
 
@@ -27,10 +27,14 @@
 
             <div class="input-container">
 
-                <input placeholder="Senha" type="password" required>
+                <input placeholder="Senha" type="password" name="senha" required>
                 <img width="20" height="20" src="../icons/cadeadoLogin.png" alt="lock-2" />
                 <a href="#">Esqueci minha senha</a>
 
+            </div>
+
+            <div class="error-message">
+                <p th:text="${errorMessage}" style="color:red;"></p>
             </div>
 
             <button type="submit" class="submit-button">Entrar</button>
@@ -40,11 +44,14 @@
         <div class="cadastro">
 
                 <p>Não tem um cadastro? </p>
-                <a href="#"> Realize agora! </a>
+                <a href="/cadastro"> Realize agora! </a>
 
         </div>
 
     </div>
+
+
+
 
 </body>
 
