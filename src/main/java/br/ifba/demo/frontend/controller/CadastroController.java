@@ -18,22 +18,22 @@ public class CadastroController {
     @Autowired
     private CadastroService cadastroService;
 
-    @PostMapping("/cadastros/save")
+    @PostMapping("/cadastro/save")
     public String save(@ModelAttribute CadastroDTO cadastroDTO) {
         cadastroService.save(cadastroDTO);
-        return "redirect:/cadastros/listAll"; 
+        return "redirect:/cadastro/listAll"; 
     }
 
-    @GetMapping("/cadastros/listAll")
+    @GetMapping("/cadastro/listAll")
     public ModelAndView listAll() {
         List<CadastroDTO> listaCadastros = cadastroService.listAll();
         ModelAndView mv = new ModelAndView();
-        mv.addObject("listaCadastros", listaCadastros);
-        mv.setViewName("cadastros");
+        mv.addObject("listaCadastro", listaCadastros);
+        mv.setViewName("cadastro");
         return mv;
     }
 
-    @GetMapping("/cadastros/findById/{id}")
+    @GetMapping("/cadastro/findById/{id}")
     public ModelAndView getById(@PathVariable Long id) {
         CadastroDTO cadastro = cadastroService.getById(id);
         ModelAndView mv = new ModelAndView();
@@ -42,11 +42,11 @@ public class CadastroController {
         } else {
             mv.addObject("errorMessage", "Cadastro não encontrado!");
         }
-        mv.setViewName("cadastros");
+        mv.setViewName("cadastro");
         return mv;
     }
 
-    @GetMapping("/cadastros/findByNome")
+    @GetMapping("/cadastro/findByNome/{nomeCadastro}")
     public ModelAndView getByNome(@RequestParam("nomeCadastro") String nomeCadastro) {
         List<CadastroDTO> cadastros = cadastroService.getByNome(nomeCadastro);
         ModelAndView mv = new ModelAndView();
@@ -55,42 +55,42 @@ public class CadastroController {
         } else {
             mv.addObject("errorMessage", "Cadastro não encontrado!");
         }
-        mv.setViewName("cadastros");
+        mv.setViewName("cadastro");
         return mv;
     }
 
-    @GetMapping("/cadastros/findByCpf")
+    @GetMapping("/cadastro/findByCpf/{cpfCadastro}")
     public ModelAndView getByCpf(@RequestParam("cpfCadastro") String cpfCadastro) {
         CadastroDTO cadastro = cadastroService.getByCpf(cpfCadastro);
         ModelAndView mv = new ModelAndView();
         if (cadastro != null) {
-            mv.addObject("listaCadastros", List.of(cadastro));
+            mv.addObject("listaCadastro", List.of(cadastro));
         } else {
             mv.addObject("errorMessage", "Cadastro não encontrado!");
         }
-        mv.setViewName("cadastros");
+        mv.setViewName("cadastro");
         return mv;
     }
 
-    @GetMapping("/cadastros/findByEmail")
+    @GetMapping("/cadastro/findByEmail/{emailCadastro}")
     public ModelAndView getByEmail(@RequestParam("emailCadastro") String emailCadastro) {
         CadastroDTO cadastro = cadastroService.getByEmail(emailCadastro);
         ModelAndView mv = new ModelAndView();
         if (cadastro != null) {
-            mv.addObject("listaCadastros", List.of(cadastro));
+            mv.addObject("listaCadastro", List.of(cadastro));
         } else {
             mv.addObject("errorMessage", "Cadastro não encontrado!");
         }
-        mv.setViewName("cadastros");
+        mv.setViewName("cadastro");
         return mv;
     }
 
-    @GetMapping("/cadastros/delete/{id}")
+    @GetMapping("/cadastro/delete/{id}")
     public ModelAndView delete(@PathVariable Long id) {
         cadastroService.delete(id);
         ModelAndView mv = new ModelAndView();
         mv.addObject("deleteMessage", "Cadastro excluído!");
-        mv.setViewName("cadastros"); 
+        mv.setViewName("cadastro"); 
         return mv;
     }
 }
