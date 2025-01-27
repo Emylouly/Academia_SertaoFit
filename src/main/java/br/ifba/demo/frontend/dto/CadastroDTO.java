@@ -11,7 +11,7 @@ public class CadastroDTO {
     private String emailCadastro;
     private String senhaCadastro;
     private String cpfCadastro;
-    private LocalDateTime dataCadastro;
+    private LocalDateTime data_cadastro;
 
 
     

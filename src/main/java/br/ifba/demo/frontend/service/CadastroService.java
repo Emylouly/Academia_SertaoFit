@@ -8,7 +8,7 @@ import br.ifba.demo.frontend.dto.CadastroDTO;
 @Service
 public class CadastroService {
 
-    private final String BASE_URL = "http://localhost:8081/cadastros";
+    private final String BASE_URL = "http://localhost:8081/cadastro";
     private final RestTemplate restTemplate = new RestTemplate();
 
     public List<CadastroDTO> listAll() {
