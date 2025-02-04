@@ -14,6 +14,10 @@ public class LoginController {
 	public String index() {
 		return "index";
 	}
+	@GetMapping("/lista")
+	public String lista() {
+		return "lista";
+	}
 	
 	@GetMapping("/home")
 	public String home() {
@@ -63,6 +67,11 @@ public class LoginController {
 	@GetMapping("/faturas")
 	public String faturas(){
 		return "faturas";
+	}
+
+	@GetMapping("/instrutor")
+	public String instrutor() {
+		return "instrutor";
 	}
 
 	@PostMapping("/process_login")
