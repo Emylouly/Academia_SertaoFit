@@ -19,6 +19,16 @@ public class LoginController {
 	public String home() {
 		return "home";
 	}
+
+	@GetMapping("/instrutor")
+	public String instrutor() {
+		return "instrutor";
+	}
+
+	@GetMapping("/lista")
+	public String lista() {
+		return "lista";
+	}
 	
 	@GetMapping("/login")
 	public String login() {
