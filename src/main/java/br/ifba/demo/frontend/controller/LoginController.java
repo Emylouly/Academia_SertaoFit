@@ -91,6 +91,10 @@ public class LoginController {
             mav.setViewName("perfil");  // Se as credenciais estão corretas, redireciona para o perfil
         }
 
+		if ("instrutor@gmail.com".equals(usuario) && "123".equals(senha)) {
+            mav.setViewName("instrutor");  // Se as credenciais estão corretas, redireciona para o perfil
+        }
+
         else {
             mav.setViewName("login");  // Se as credenciais estão incorretas, retorna à página de login
             mav.addObject("errorMessage", "Credenciais inválidas. Tente novamente.");
