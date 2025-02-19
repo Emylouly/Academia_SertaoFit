@@ -19,6 +19,16 @@ public class LoginController {
 	public String home() {
 		return "home";
 	}
+
+	@GetMapping("/instrutor")
+	public String instrutor() {
+		return "instrutor";
+	}
+
+	@GetMapping("/lista")
+	public String lista() {
+		return "lista";
+	}
 	
 	@GetMapping("/login")
 	public String login() {
@@ -79,6 +89,10 @@ public class LoginController {
         // Validação simples das credenciais
         if ("josegomes@gmail.com".equals(usuario) && "123".equals(senha)) {
             mav.setViewName("perfil");  // Se as credenciais estão corretas, redireciona para o perfil
+        }
+
+		if ("instrutor@gmail.com".equals(usuario) && "123".equals(senha)) {
+            mav.setViewName("instrutor");  // Se as credenciais estão corretas, redireciona para o perfil
         }
 
         else {
